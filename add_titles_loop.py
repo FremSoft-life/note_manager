@@ -1,45 +1,26 @@
-notes = [
-    {
-        "username": "Виталя",
-        "create_date": "13.01.2025"
-    },
-    {
-        "username": "Сергей",
-        "create_date": "14.01.2025"
-    },
-    {
-        "username": "Александр",
-        "create_date": "14.01.2025"
-    },
-    {
-        "username": "Александр",
-        "create_date": "14.01.2025"
-    },
-    {
-        "username": "Александр",
-        "create_date": "14.01.2025"
-    }
+# add_titles_loop.py
 
-]
+def add_titles():
+    """
+    Функция запрашивает у пользователя заголовки заметок и
+    возвращает их в виде списка.
+    """
+    titles = []
+    while True:
+        title = input("Введите заголовок (или оставьте пустым для завершения): ТТХ объекта 202 ")
+        if not title: # Проверка на пустой ввод
+            break
+        titles.append(title)
+    return titles
 
-def create_not(): #1usage
-    notes = {
-        "username": input("введите имя пользователя"),
-        "create_date": input("введите дату посещения пользователем"),
-        "create_date": input("введите дату посещения пользователем"),
-        "username": input("введите имя пользователя")
 
-    }
+if __name__ == "__main__":
+    print("Добавление заголовков к заметке: Скорость")
+    titles = add_titles()
 
-    return note
-
-while True:
-    print("возможные операции:\n"
-          "0 - Выйти\n"
-          "1 - Добавить заметку\n"
-          "2 - Удалить заметку")
-    operation = input("Введите название операции: ")
-    if operation == "0":
-        break
-    elif operation == "1":
-        notes.append(creat.note())
+    if titles:
+        print("\nЗаголовки заметки: Кинематика")
+        for title in titles:
+            print(f"- {title}")
+    else:
+        print("\nНе было добавлено ни одного заголовка.")
