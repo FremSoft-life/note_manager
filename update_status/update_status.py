@@ -8,18 +8,18 @@ def get_new_status(valid_statuses):
     """Запрашивает у пользователя статус и проверяет его корректность."""
 
     while True:
-        print("\n Выберите новый статус заметки:")
-        for i, status in enumerate(valid_statuses):
-            print(f"{i+1}. {status}")
+    print("\n Выберите новый статус заметки:")
+    for i, status in enumerate(valid_statuses):
+    print(f"{i+1}. {status}")
 
-        try:
-            user_choice = int(input("Ваш выбор: "))
-            if 1 <= user_choice <= len(valid_statuses):
-                return valid_statuses[user_choice - 1]
-            else:
-                print("Некорректный ввод. Пожалуйста, выберите число из списка.")
-        except ValueError:
-            print("Некорректный ввод. Пожалуйста, введите число.")
+    try:
+    user_choice = int(input("Ваш выбор: "))
+    if 1 <= user_choice <= len(valid_statuses):
+    return valid_statuses[user_choice - 1]
+    else:
+    print("Некорректный ввод. Пожалуйста, выберите число из списка.")
+    except ValueError:
+    print("Некорректный ввод. Пожалуйста, введите число.")
 
 
 def update_and_display_status(current_status, new_status):
@@ -45,9 +45,9 @@ if __name__ == "__main__":
     main()
 def get_new_status(valid_statuses):
 
-        user_input = input("Введите новый статус (или число из списка): ").lower()
-        if user_input in valid_statuses:
-            return user_input
+    user_input = input("Введите новый статус (или число из списка): ").lower()
+    if user_input in valid_statuses:
+    return user_input
 
 def main():
     note = {"status": "в процессе"} # Словарь для хранения информации о заметке
